@@ -4,7 +4,7 @@
 * $x$ is also called $\text{predictor or feature or explanatory variables}$
 * $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation.
 
-* $ \text{Underfitting /  High Bias}$ : The model is too simple unable to capture patters in the data. 
+* $ \text{Underfitting /  High Bias}$ : The model is too simple hence unable to capture patters in the data. 
 * $\text{Hyperparametrs}$ : They specify details of the learning process. They are chosen for traning and not $learnt$, in contrast to $parameters$. For example the $learning  \text{ } rate$ in Gradient Descent, the $C$ in Soft Margin SVM's etc.
 
 
@@ -13,17 +13,23 @@
 |Overfitting and Underfitting |
 
 
+***
 
 ## General Considerations for Prediction
 * Our goal is to get good $\text{out-of-sample}$ predictions i.e. the model $generalises$ well or simply, it makes $good$ predictions on unseen examples.  
-* $n$ linearly independent regressors will fit $n$ observations perfectly but will usually have poor $\text{out-of-sample}$ performance. 
+* One example: $n$ linearly independent $regressors$ will fit $n$ observations perfectly but will usually have poor $\text{out-of-sample}$ performance. $n$ Linearly Independent equations in $n$ variables (the regression coefficients here)
+
+***
+
 ### Solving Overfitting
-1) $\text{Regularization}$: Penalize models for excessive complexity as $simpler$ models tend to work better for $\text{out-of-sample}$ forecasts.
-2) Splitting the dataset into $\text{Training, Validation and Testing}$ 
+1) $\text{Regularization}$: Penalize models for excessive complexity as $simpler$ models tend to work better for $\text{out-of-sample}$ forecasts. Simpler models tend to work better for $\tet{out-of-sample} forecasts.
+2) Splitting the dataset into $\text{Training, Validation and Testing}$. Use the $\text{training}$ data to estimate a model, the $\text{validation data}$ to choose your model, and the $\text{testing data}$ to evaluate how well your chosen model performs. (Often $\text{validation}$ and $\text{testing}$ sets are combined.)
 3) An $explicit$  numeric  measure  of  model  complexity: Hyperparametrs. For example, the degree of the polynomial you want to fit your data into. 
 
 ### Tuning the model: $\text{k-fold-cross-validation}$
+
 ***
+
 ### Algorithm:
 1) Divide  the  data  into  $k$  roughly  equal  subsets  (folds)  and  label  them  by  
 $s = 1, ... , k$. Start with subset $s = 1$.
@@ -42,6 +48,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 
 
 
+***
 
 ## Classification and Regression Trees
 
@@ -54,13 +61,15 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 | Classification tree for survivors of the $Titanic$ |
 
 
-
+* Above tree is constructed using just $2$ features $age$ and $class$ of travel.
 * The Class $lived$ or $died$ mentioned on the $leaves$ is the majority class.  
 * Let's see how to interpret it and make a prediction:
+    - $\text{age: 34 , class: 1}  \to \text{predicted-outcome: lived}$
 * $Tranining$ $Accuracy$: $\frac{723}{1046} = 69.12$%
 * The paper mentions "The rules fits the data reasonably well, misclassifying about $30$ percent of the observations in the testing set"
 
 
+***
 ## Partition Plot 
 
 
@@ -68,15 +77,38 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 |:--:| :--:|
 |Decision Tree | Partition Plot| 
 
+***
+
+## Decision Tree vs Logistic Regression
+* By constructing a $tree$ relating $survival$ to $age$ the rule generated is $\text{"survive if age} < 8.5 \text{ year"}$ while $\text{Logistic Regression}$ produces:
+
+
+|<img src="./Images/titanic_logistic.png" alt= "" width="800">  |
+|:--:| 
+|Logistic Regression of Survival versus Age|
+
+* $\text{Logistic model}$ says $age$ is barely important.
+
+* This is resolved as: 
+* In the below diagram, Survival rates for the youngest passengers were relatively high, and survival rates for older passengers were relatively low. So what mattered for survival is not so much age, but whether the passenger was a child or elderly. It would be diffificult to discover this pattern from a logistic regression alone.
+
+|<img src="./Images/titanic_buckets.png" alt= "" width="800">  |
+|:--:| 
+|Titanic Survival Rates by Age Group|
+
+
+* $Trees$ also handle missing data well.
+* $\text{Perlich, Provost, and Simonoff (2003)}$ examined several standard datasets and found that $\text{“logistic regression is better for smaller data sets and tree induction for larger data sets.”}$
 
 ## Pruning
+* We can keep branching the $tree$ further and get better $\text{Training Accuracy}$ but this will simply $overfit$.
 * Solution to $\text{overfitting}$ is to add $\text{cost  to complexity}$ 
 * One measure for complexity in a tree: the number of $\text{leaves}$ and other is the  $\text{depth}$ of the tree
 * Typically chosen using $1\text{0-fold-cross-validation}$.
 * "Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard 
 
 
-
+***
 ## Statistical Method: Conditional Inference tree - $ctree$
 * $ctree$ chooses the structure of the tree using a sequence of hypothesis tests
 * The resulting trees tend to need very little pruning (Hothorn, Hornik, and Zeileis 2006)
@@ -96,13 +128,15 @@ and children first . . . particularly if they were traveling first . .  class"
 
 
 
-
+***
 ## An Economic Example Using Home Mortgage Disclosure Act Data
-* Question: If race played a significant role in determining who was approved for a mortgage?
-## Logistic Regression:
-* Result of logistic regression: The coefficient on race showed a statistically significantly negative impact on probability of getting a mortgage for black applicants that later prompted considerable subsequent debate and discussion.
+* Question: $\text{"If race played a significant role in determining who was approved for a mortgage?"}$
+### Logistic Regression:
+* Result of logistic regression: The coefficient of race showed a $\text{statistically significantly}$ negative impact on probability of getting a mortgage for black applicants that later prompted considerable subsequent debate and discussion.
 
-## Ctree:
+
+***
+### Ctree:
 * $2,380$  observations of $12$  predictors , used $R$ package $party$.
 
 |Model|# of misclasified examples|Error rate|
@@ -110,12 +144,17 @@ and children first . . . particularly if they were traveling first . .  class"
 |Logistic Regression|$228$|$9.6$%|
 |ctree|$225$|$9.5$%|
 
-* $dmi = \text{denied mortgage insurance}$: this variable alone explains much of the variation in the data. 
+|<img src="./Images/home_ctree.png" alt= "" width="800">  |
+|:--:| 
+|Conditional Inference Tree for House Mortage data|
+
+* $dmi = \text{denied mortgage insurance}$: this variable alone explains much of the variation in the data. See the figure
 * The race variable (“black”) shows up far down the tree
 * So how to infer if $race$ is decisive?
-* When this $race$ is not used as a feature to construct the $ctree$, accuracy doesn’t change at all: 
+* When this $race$ is not used as a feature to construct the $ctree$, accuracy doesn’t change at all. 
 * But it's possible that there is $racial$ discrimination  elsewhere in the mortgage process, or that some of the variables included are highly correlated with race.
 
+***
 ## Boosting Bagging Bootstrap
 * Adding randomness turns out to be a helpful way of dealing with the overfiiing  problem.
 
@@ -124,7 +163,18 @@ and children first . . . particularly if they were traveling first . .  class"
 * $\text{Boosting}$: Repeated estimation where misclassified observations are given increasing weight in each repetition. The final estimate is then a vote or an average across the repeated estimates.
 
 * Econometricians are well-acquainted with the bootstrap but rarely use the other two methods
+
+***
 ## Randon Forests
+***
+### Algorithm
+1. Choose a $bootstrap$ sample of the observations and start to grow a tree.
+2. At each node of the tree, choose a random sample of the predictors to make 
+the next decision. Do not prune the trees.
+3. Repeat this process many times to grow a forest of trees.
+4. In order to determine the classification of a new observation, have each tree 
+make a classification and use a majority vote for the final prediction
+***
 
 * This method produces surprisingly good out-of-sample fits, particularly with 
 highly nonlinear data.
@@ -150,3 +200,4 @@ What is probit?
 * Slight detail about regression trees: grow till THRESHOLD variamce, report the mean 
 * If the values of all features is same but the results of the 2 datas are different: It won't be possible to get 100% accuracy there. 
 Forget what these number are, just look at "alive" or "dead"
+* Run checks 
