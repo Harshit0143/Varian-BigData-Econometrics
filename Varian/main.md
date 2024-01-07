@@ -21,8 +21,8 @@
 
 ### Solving Overfitting
 1) $\text{Regularization}$: Penalize models for excessive complexity as $simpler$ models tend to work better for $\text{out-of-sample}$ forecasts. Simpler models tend to work better for $\tet{out-of-sample} forecasts.
-2) Splitting the dataset into $\text{Training, Validation and Testing}$. Use the $\text{training}$ data to estimate a model, the $\text{validation data}$ to choose your model, and the $\text{testing data}$ to evaluate how well your chosen model performs. (Often $\text{validation}$ and $\text{testing}$ sets are combined.)
-3) An $explicit$  numeric  measure  of  model  complexity: Hyperparametrs. For example, the degree of the polynomial you want to fit your data into. 
+2) An $explicit$  numeric  measure  of  model  complexity: Hyperparametrs. For example, the degree of the polynomial you want to fit your data into. 
+3) Splitting the dataset into $\text{Training, Validation and Testing}$. Use the $\text{training}$ data to estimate a model, the $\text{validation data}$ to choose your model, and the $\text{testing data}$ to evaluate how well your chosen model performs. (Often $\text{validation}$ and $\text{testing}$ sets are combined.)
 
 ### Tuning the model: $\text{k-fold-cross-validation}$
 
