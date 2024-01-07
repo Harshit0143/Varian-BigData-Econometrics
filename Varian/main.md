@@ -4,11 +4,11 @@
 * $x$ is also called $\text{predictor or feature or explanatory variables}$
 * $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation.
 
-* $ \text{Underfitting /  High Bias}$ : The model is too simple hence unable to capture patters in the data. 
+* $ \text{Underfitting/  High Bias}$ : The model is too simple hence unable to capture patters in the data. 
 * $\text{Hyperparametrs}$ : They specify details of the learning process. They are chosen for traning and not $learnt$, in contrast to $parameters$. For example the $learning  \text{ } rate$ in Gradient Descent, the $C$ in Soft Margin SVM's etc.
 
 
-| ![Overfitting and Underfitting](./Images/Fitting.svg) | 
+| ![Overfitting and Underfitting](./Images/Fitting.png) | 
 |:--:| 
 |Overfitting and Underfitting |
 
@@ -158,7 +158,7 @@ and children first . . . particularly if they were traveling first . .  class"
 ## Boosting Bagging Bootstrap
 * Adding randomness turns out to be a helpful way of dealing with the overfiiing  problem.
 
-* $\text{Bootstrap}$: Choosing (with replacement) a sample of size involves choosing (with replacement) a sample of size $n$ from a dataset from a dataset to estimate the sampling distribution of some statistic. A variation is $m$ out of $n$ bootstrap $(n > m$)$.
+* $\text{Bootstrap}$: Choosing (with replacement) a sample of size involves choosing (with replacement) a sample of size $n$ from a dataset from a dataset to estimate the sampling distribution of some statistic. A variation is $m$ out of $n$ bootstrap $(n > m)$.
 * $\text{Bagging}$: Averaging across models estimated with several different bootstrap samples in order to improve the performance of an estimator.
 * $\text{Boosting}$: Repeated estimation where misclassified observations are given increasing weight in each repetition. The final estimate is then a vote or an average across the repeated estimates.
 
