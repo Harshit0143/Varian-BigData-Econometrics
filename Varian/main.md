@@ -2,9 +2,7 @@
 
 ## Some terms:
 * $x$ is also called $\text{predictor or feature or explanatory variables}$
-* $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation.
-
-* $ \text{Underfitting/  High Bias}$ : The model is too simple hence unable to capture patters in the data. 
+* $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation. 
 * $\text{Hyperparametrs}$ : They specify details of the learning process. They are chosen for traning and not $learnt$, in contrast to $parameters$. For example the $learning  \text{ } rate$ in Gradient Descent, the $C$ in Soft Margin SVM's etc.
 
 
