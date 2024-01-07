@@ -84,79 +84,29 @@ the age example shows that they may reveal aspects of the data that are not appa
 examined several standard datasets and found that  “logistic regression is better for smaller data sets and tree induction for larger data sets.”
 * r the tree formulation made this nonlinearity immediately apparent.
 
-## Pruning
-*  Trees  - problem- overfitting - It can almost "completely" receover the training data information 
-*  Solution- cost to complexity: "to avoid overfitting"
-* one measure for complexity: the number of **leaves** . other: **max depth** 
-* 10 - fold cross validation - 9 forlds training - excluded fold for out-of-sample trsting 
-* choose C that's the best 
-* Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard deviation lower than the loss-minimizing value.
-* skill, experience, and intuition and Diagnostics, exploration, and experimentation a
 
 ## Growing the tree:
 * pure leaf idea 
 * splitting then the lower level boxes
 * now let's not discuss the splitting criuteria is chosen
-### Explicitly Statistical Method: Conditional Inference tree - ctree
-* ctree chooses the structure of the tree using a sequence of hypothesis tests
-The resulting trees tend to need very little pruning (Hothorn, Hornik, and Zeileis 2006)
-* show image on paper pg 12
 
 
-* One might summarize this tree by the following principle: “women
-and children first . . . particularly if they were traveling first . .  class"
+* 
 * Not clearly mentioned what p < 0.001 and p  = 0.01 means 
 
-* classification trees can be helpful in summarizing relationships in data, as well as predicting outcomes. 
-
-* subsp: number of siblings plus spouse aboard.
 
 
-# An Economic Example Using Home Mortgage Disclosure Act Data
-if race played a significant role in determining who was approved for a mortgage.
-* Result of logistic regression: The coeffi cient on race showed a statistically signifiically negative impact on probability of getting a mortgage for black applicants that later prompted considerable subsequent debate and discussion;
-
-### Using a tree:
-* 2,380  observations of 12  predictors , R package party.
-* misclassifying 228 of the 2,380  observations : 9.579% trainig error 
-* logistic: 225 of the 2,380  9.5% error
-* “dmi”= “denied mortgage insurance.” This variable alone explains much of the variation in the data. 
-* The race variable (“black”) shows up far down the tree
-* One way to gauge whether a variable is important is to exclude it from the 
-prediction and see what happens. 
-* when it's done accuracy of the tree-based model doesn’t change at all: 
-*  that some of the variables included are esewhere in the mortgage process, or that some of the variables included are highly correlated with race.
 
 
-### Boosting Bagging Bootstrap
-* but adding randomness turns out to be a helpful way of dealing 
-with the overfi ith the overfi tting problem.
 
-* Bootstrap involves choosing (with replacement) a sample of size involves choosing (with replacement) a sample of size n from a dataset from a dataset to estimate the sampling distribution of some statistic. A variation is the 
-“m out of n bootstrap” which draws a sample of size bootstrap” which draws a sample of size m from a dataset of size from a dataset of size n > m.
-* Bagging involves averaging across models estimated with several different boot- involves averaging across models estimated with several different bootstrap samples in order to improve the performance of an estimator
-* Boosting involves repeated estimation where misclassified observations are given 
-increasing weight in each repetition. The final estimate is then a vote or an average n
-across the repeated estimates. 
+ 
 * see image while dmo is strong 
-Econometricians are well-acquainted with the bootstrap but rarely use the 
-other two methods
-
-* This method produces surprisingly good out-of-sample fits, particularly with 
-highly nonlinear data.
-* Howard and Bowles (2012) claim “ensembles of 
-decision trees (often known as ‘Random Forests’) have been the most successful 
-general-purpose algorithm in modern times.
-
-* There are 
-a number of variations and extensions of the basic “ensemble of trees” model such 
-as Friedman’s “Stochastic Gradient Boosting” (Friedman 2002)
-
-they don’t
-offer simple summaries of relationships in the data
 
 
-I ran the random forest method on the HMDA data and found that it misclassi- ran the random forest method on the HMDA data and found that it misclassifi ed 223 of the 2,380 cases, a small improvement over the logit and the ctree. I also ed 223 of the 2,380 cases, a small improvement over the logit and the ctree. I also
+le summaries of relationships in the data
+
+
+I ran the random forest method on the HMDA data and found that it misclassi- ran the random forest method on the HMDA data and found that it misclassifi ed 223 of the 2,380 cases, a small improvement over the logit and the ctree. I also ed 223 of the 2,380 cases, a small improvement over the logit and the ctree. I also
 used the importance option in random forests to see how the predictors compared. sed the importance option in random forests to see how the predictors compared.
 It turned out that “dmi t turned out that “dmi” was the most important predictor and race was second was the most important predictor and race was second
 from the bottom, which is consistent with the ctree analysis
