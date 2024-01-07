@@ -50,22 +50,6 @@ mean or median of the conditional distribution. That actually the the thing behi
 
 
 
-* Classification problem
-* Losigtic can make only Linear decision boundary! We sometimes need a non-linear lassfier   
-x: explanatory variables or predictors (by economists)
-* Economists would typically use a generalized linear model like a **logit** or **probit** for a classification problem.
-* The goal is to construct (or “grow”) a decision tree that leads to good out-of-sample predictions
-* Trees tend to work well for problems where there are important nonlinearities and interactions.
-* I'll just throw ar you the decision tree first to show the mechanics and later we'll see how to grow it: 
-* Why have they mentioned lived on some leaves and died in some? That's because it's the majority observations in the testing set.
-* Let's see how to interpret it and make a prediction
-Accuracy: 723 / 1046 = 69.12% as the paper mentiions it misclassifies abiut 30% of the training examples
-* Show the tree and the "partition plot" side by side and explain the partitioning. It diivided the 2d space into rectiagular regions. Division by lines parallel to the axes
-* Slight detail about regression trees: grow till THRESHOLD variamce, report the mean 
-* Now it's clear that this decision tree can fit any kind of data
-* Unfortunately the link to code the author refrerred is broken
-* If the values of all features is same but the results of the 2 datas are different: It won't be possible to get 100% accuracy there. 
-Forget what these number are, just look at "alive" or "dead"
 
 # How to grow the tree?
 
@@ -176,3 +160,5 @@ I ran the random forest method on the HMDA data and found that it misclassi- ran
 used the importance option in random forests to see how the predictors compared. sed the importance option in random forests to see how the predictors compared.
 It turned out that “dmi t turned out that “dmi” was the most important predictor and race was second was the most important predictor and race was second
 from the bottom, which is consistent with the ctree analysis
+
+
