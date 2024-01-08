@@ -189,8 +189,7 @@ general-purpose algorithm in modern times.
 a number of variations and extensions of the basic “ensemble of trees” model such 
 as Friedman’s “Stochastic Gradient Boosting” (Friedman 2002)
 
-they don’t
-offer simp
+
 
 # References
 Images:
