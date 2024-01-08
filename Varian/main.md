@@ -3,7 +3,6 @@
 ## Some terms:
 * $x$ is also called $\text{predictor or feature or explanatory variables}$
 * $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation. 
-* $\text{Hyperparametrs}$ : They specify details of the learning process. They are chosen for traning and not $learnt$, in contrast to $parameters$. For example the $learning  \text{ } rate$ in Gradient Descent, the $C$ in Soft Margin SVM's etc.
 
 
 | ![Overfitting and Underfitting](./Images/Fitting.png) | 
@@ -71,7 +70,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 ## Partition Plot 
 
 
-|<img src="./Images/titanic_dtree.png" alt= "" width="400">  |<img src="./Images/titanic_partition.png" alt= "" width="350">|
+|<img src="./Images/titanic_dtree.png" alt= "" width="500">  |<img src="./Images/titanic_partition.png" alt= "" width="350">|
 |:--:| :--:|
 |Decision Tree | Partition Plot| 
 
@@ -189,13 +188,5 @@ offer simp
 
 # References
 Images:
-*Overfitting and Underfitting* : https://in.mathworks.com/discovery/overfitting.html
-
-
-
-What is probit?
-
-* Slight detail about regression trees: grow till THRESHOLD variamce, report the mean 
-* If the values of all features is same but the results of the 2 datas are different: It won't be possible to get 100% accuracy there. 
-Forget what these number are, just look at "alive" or "dead"
-* Run checks 
+* Overfitting and Underfitting* : https://in.mathworks.com/discovery/overfitting.html
+* All other images taken from [Big Data: New Tricks for Econometrics](https://www.aeaweb.org/articles?id=10.1257/jep.28.2.3)
