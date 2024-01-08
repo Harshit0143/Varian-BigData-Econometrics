@@ -145,7 +145,7 @@ and children first . . . particularly if they were traveling first . .  class"
 
 ***
 ## Boosting Bagging Bootstrap
-* Adding randomness turns out to be a helpful way of dealing with the overfiiing  problem.
+* Adding randomness turns out to be a helpful way of dealing with the overfitting  problem.
 
 * $\text{Bootstrap}$: Choosing (with replacement) a sample of size involves choosing (with replacement) a sample of size $n$ from a dataset from a dataset to estimate the sampling distribution of some statistic. A variation is $m$ out of $n$ bootstrap $(n > m)$.
 * $\text{Bagging}$: Averaging across models estimated with several different bootstrap samples in order to improve the performance of an estimator.
