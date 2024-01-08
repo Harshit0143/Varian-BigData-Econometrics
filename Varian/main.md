@@ -57,7 +57,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to buikd a $\text{non-linear classfier}$. 
 * Trees tend to work well for problems where there are important nonlinearities and interactions.
 
-|<img src="./Images/titanic_dtree.png" alt= "" width="800">  |<img src="./Images/titanic_partition.png" alt= "" width="800">|
+|<img src="./Images/titanic_dtree.png" alt= "" width="1000">  |<img src="./Images/titanic_partition.png" alt= "" width="1000">|
 |:--:| :--:|
 |Decision Tree | Partition Plot| 
 
