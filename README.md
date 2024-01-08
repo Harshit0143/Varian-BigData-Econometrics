@@ -2,7 +2,7 @@
 * Prepared by **Harshit Goyal (2021MT10143)**
 
 ## Some terms:
-* $x$ is also called $\text{predictor or feature or explanatory variables}$
+* $x$ is also called $\text{predictor or feature or explanatory variables}$ in this paper.
 * $\text{Overfitting/ High Variance  }$ : The model picks up noise in the data, performs well on the Traning Data for poor generalisation. 
 
 
