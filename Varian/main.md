@@ -75,13 +75,13 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 <br>
 <br>
 <br>
-<br>
+
 
 ## Decision Tree vs Logistic Regression
 * By constructing a $tree$ relating $survival$ to $age$ the rule generated is $\text{"survive if age} < 8.5 \text{ year"}$ while $\text{Logistic Regression}$ produces:
 
 
-|<img src="./Images/titanic_logistic.png" alt= "" width="800">  |
+|<img src="./Images/titanic_logistic.png" alt= "" width="700">  |
 |:--:| 
 |Logistic Regression of Survival versus Age|
 
