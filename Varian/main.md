@@ -75,14 +75,13 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 <br>
 <br>
 <br>
-<br>
 
 
 ## Decision Tree vs Logistic Regression
 * By constructing a $tree$ relating $survival$ to $age$ the rule generated is $\text{"survive if age} < 8.5 \text{ year"}$ while $\text{Logistic Regression}$ produces:
 
 
-|<img src="./Images/titanic_logistic.png" alt= "" width="700">  |
+|<img src="./Images/titanic_logistic.png" alt= "" width="800">  |
 |:--:| 
 |Logistic Regression of Survival versus Age|
 
@@ -91,7 +90,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * This is resolved as: 
 * In the below diagram, Survival rates for the youngest passengers were relatively high, and survival rates for older passengers were relatively low. So what mattered for survival is not so much age, but whether the passenger was a child or elderly. It would be diffificult to discover this pattern from a logistic regression alone.
 
-|<img src="./Images/titanic_buckets.png" alt= "" width="800">  |
+|<img src="./Images/titanic_buckets.png" alt= "" width="600">  |
 |:--:| 
 |Titanic Survival Rates by Age Group|
 
