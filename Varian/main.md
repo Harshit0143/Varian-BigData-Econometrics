@@ -53,10 +53,9 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to buikd a $\text{non-linear classfier}$. 
 * Trees tend to work well for problems where there are important nonlinearities and interactions.
 
-|<img src="./Images/titanic_dtree.png" alt= "" width="500">| 
-|:--:| 
-|Classification tree for survivors of the $Titanic$ |
-
+|<img src="./Images/titanic_dtree.png" alt= "" width="500">  |<img src="./Images/titanic_partition.png" alt= "" width="350">|
+|:--:| :--:|
+|Decision Tree | Partition Plot| 
 
 * Above tree is constructed using just $2$ features $age$ and $class$ of travel.
 * The Class $lived$ or $died$ mentioned on the $leaves$ is the majority class.  
@@ -66,13 +65,6 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * The paper mentions "The rules fits the data reasonably well, misclassifying about $30$ percent of the observations in the testing set"
 
 
-***
-## Partition Plot 
-
-
-|<img src="./Images/titanic_dtree.png" alt= "" width="500">  |<img src="./Images/titanic_partition.png" alt= "" width="350">|
-|:--:| :--:|
-|Decision Tree | Partition Plot| 
 
 ***
 
