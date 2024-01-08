@@ -155,6 +155,9 @@ and children first . . . particularly if they were traveling first . .  class"
 * But it's possible that there is $racial$ discrimination  elsewhere in the mortgage process, or that some of the variables included are highly correlated with race.
 
 ***
+<br>
+<br>
+
 ## Boosting Bagging Bootstrap
 * Adding randomness turns out to be a helpful way of dealing with the overfitting  problem.
 
