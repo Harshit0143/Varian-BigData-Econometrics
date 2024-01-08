@@ -1,3 +1,0 @@
-Start R and type
-  source("go-house-corr.R")
-This will produce a number of pdf output files that you can peruse.
