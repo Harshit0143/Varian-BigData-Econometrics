@@ -53,7 +53,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to buikd a $\text{non-linear classfier}$. 
 * Trees tend to work well for problems where there are important nonlinearities and interactions.
 
-| ![Classification tree for survivors of the $Titanic$](./Images/titanic_dtree.png) | 
+| <img src="./Images/titanic_dtree.png" alt= "" width="800"> | 
 |:--:| 
 | Classification tree for survivors of the $Titanic$ |
 
@@ -188,5 +188,5 @@ offer simp
 
 # References
 Images:
-* Overfitting and Underfitting* : https://in.mathworks.com/discovery/overfitting.html
+* *Overfitting and Underfitting* : https://in.mathworks.com/discovery/overfitting.html
 * All other images taken from [Big Data: New Tricks for Econometrics](https://www.aeaweb.org/articles?id=10.1257/jep.28.2.3)
