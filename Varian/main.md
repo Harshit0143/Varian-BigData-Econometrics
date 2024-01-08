@@ -39,7 +39,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 
 
 * Notice: We test on the fold, we didn't use for training so it'll give us an idea of $\text{out-of-sample}$ performance. Even if there is no $\text{tuning parameter}$, it is prudent to use cross-validation to report $\text{goodness-of-fit}$.
-* Common choices for $k$ are $10$, $5$, and $\text{Sample Size - 1}$ or $“leave \text{ } one \text{ } out”$.
+* Common choices for $k$ are $10$, $5$, and $\text{Sample Size - 1}$ or $\text{“leave one out”}$.
 * Another usecase: When dataset is small and you don't want to split it into  $\text{Training}$, $\text{Validation}$ and $\text{Testing}$ and $waste$ it. 
 * For  many  years,  economists  have  reported  $\text{in-sample goodness-of-fit}$  measures  using  the  excuse  that  we  had  $small$  datasets. But now now larger datasets have become available so it's good to split the dataset. 
 
