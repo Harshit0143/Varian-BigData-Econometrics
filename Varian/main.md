@@ -192,6 +192,7 @@ as Friedman’s “Stochastic Gradient Boosting” (Friedman 2002)
 
 
 # References
+* Prepared by Harshit Goyal (2021MT10143)
 Images:
 * *Overfitting and Underfitting* : https://in.mathworks.com/discovery/overfitting.html
 * All other images taken from [Big Data: New Tricks for Econometrics](https://www.aeaweb.org/articles?id=10.1257/jep.28.2.3)
