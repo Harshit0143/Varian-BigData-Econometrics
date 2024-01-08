@@ -53,9 +53,9 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to buikd a $\text{non-linear classfier}$. 
 * Trees tend to work well for problems where there are important nonlinearities and interactions.
 
-| <img src="./Images/titanic_dtree.png" alt= "" width="800"> | 
+|<img src="./Images/titanic_dtree.png" alt= "" width="800">| 
 |:--:| 
-| Classification tree for survivors of the $Titanic$ |
+|Classification tree for survivors of the $Titanic$ |
 
 
 * Above tree is constructed using just $2$ features $age$ and $class$ of travel.
@@ -162,7 +162,7 @@ and children first . . . particularly if they were traveling first . .  class"
 * Econometricians are well-acquainted with the bootstrap but rarely use the other two methods
 
 ***
-## Randon Forests
+## Random Forests
 ***
 ### Algorithm
 1. Choose a $bootstrap$ sample of the observations and start to grow a tree.
