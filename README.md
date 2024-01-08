@@ -192,7 +192,7 @@ as Friedman’s “Stochastic Gradient Boosting” (Friedman 2002)
 
 ### To replicate the experiments: 
 * The $\text{datasets}$ and $\text{R}$ code of Author can be found [here](https://scikit-learn.org/stable/modules/tree.html).
-* Build [$\text{Decision Trees}$](https://scikit-learn.org/stable/modules/tree.html) and [$\text{Random Forests}$](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). 
+* Build [Decision Trees](https://scikit-learn.org/stable/modules/tree.html) and [Random Forests](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). 
 
 # References
 ### Images:
