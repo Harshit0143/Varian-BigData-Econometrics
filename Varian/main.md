@@ -19,7 +19,7 @@
 ***
 
 ### Solving Overfitting
-1) $\text{Regularization}$: Penalize models for excessive complexity as $simpler$ models tend to work better for $\text{out-of-sample}$ forecasts. Simpler models tend to work better for $\text{out-of-sample}$ forecasts.
+1) $\text{Regularization}$: Penalize models for excessive complexity as $simpler$ models tend to work better for $\text{out-of-sample}$ forecasts.
 2) An $explicit$  numeric  measure  of  model  complexity: Hyperparametrs. For example, the degree of the polynomial you want to fit your data into. 
 3) Splitting the dataset into $\text{Training, Validation and Testing}$. Use the $\text{training}$ data to estimate a model, the $\text{validation data}$ to choose your model, and the $\text{testing data}$ to evaluate how well your chosen model performs. (Often $\text{validation}$ and $\text{testing}$ sets are combined.)
 
@@ -41,7 +41,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Notice: We test on the fold, we didn't use for training so it'll give us an idea of $\text{out-of-sample}$ performance. Even if there is no $\text{tuning parameter}$, it is prudent to use cross-validation to report $\text{goodness-of-fit}$.
 * Common choices for $k$ are $10$, $5$, and $\text{Sample Size - 1}$ or $\text{“leave one out”}$.
 * Another usecase: When dataset is small and you don't want to split it into  $\text{Training}$, $\text{Validation}$ and $\text{Testing}$ and $waste$ it. 
-* For  many  years,  economists  have  reported  $\text{in-sample goodness-of-fit}$  measures  using  the  excuse  that  we  had  $small$  datasets. But now now larger datasets have become available so it's good to split the dataset. 
+* For  many  years,  economists  have  reported  $\text{in-sample goodness-of-fit}$  measures  using  the  excuse  that  we  had  $small$  datasets. But now larger datasets have become available so it's good to split the dataset. 
 
 
 
@@ -54,7 +54,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 ## Classification and Regression Trees
 
 
-* Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to buikd a $\text{non-linear classfier}$. 
+* Economists would typically use a generalized linear model like a $logit$ or $probit$ for a classification problem but these can draw only Linear decision boundary! We want to build a $\text{non-linear classfier}$. 
 * Trees tend to work well for problems where there are important nonlinearities and interactions.
 
 |<img src="./Images/titanic_dtree.png" alt= "" width="1000">  |<img src="./Images/titanic_partition.png" alt= "" width="1000">|
@@ -105,7 +105,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Solution to $\text{overfitting}$ is to add $\text{cost  to complexity}$ 
 * One measure for complexity in a tree: the number of $\text{leaves}$ and other is the  $\text{depth}$ of the tree
 * Typically chosen using $1\text{0-fold-cross-validation}$.
-* "Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard"
+* "Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard deviation lower than the loss-minimizing value."
 
 
 ***
@@ -132,7 +132,7 @@ and children first . . . particularly if they were traveling first . .  class"
 ## An Economic Example Using Home Mortgage Disclosure Act Data
 * Question: $\text{"If race played a significant role in determining who was approved for a mortgage?"}$
 ### Logistic Regression:
-* Result of logistic regression: The coefficient of race showed a $\text{statistically significantly}$ negative impact on probability of getting a mortgage for black applicants that later prompted considerable subsequent debate and discussion.
+* Result of logistic regression: The coefficient of race showed a $\text{statistically significantly}$ negative impact on probability of getting a mortgage for black applicants that later prompted considerable debate and discussion.
 
 
 ***
@@ -161,7 +161,7 @@ and children first . . . particularly if they were traveling first . .  class"
 ## Boosting Bagging Bootstrap
 * Adding randomness turns out to be a helpful way of dealing with the overfitting  problem.
 
-* $\text{Bootstrap}$: Choosing (with replacement) a sample of size involves choosing (with replacement) a sample of size $n$ from a dataset from a dataset to estimate the sampling distribution of some statistic. A variation is $m$ out of $n$ bootstrap $(n > m)$.
+* $\text{Bootstrap}$: Choosing (with replacement) a sample of size $n$ from a dataset to estimate the sampling distribution of some statistic. A variation is $m$ out of $n$ bootstrap $(n > m)$.
 * $\text{Bagging}$: Averaging across models estimated with several different bootstrap samples in order to improve the performance of an estimator.
 * $\text{Boosting}$: Repeated estimation where misclassified observations are given increasing weight in each repetition. The final estimate is then a vote or an average across the repeated estimates.
 
