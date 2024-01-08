@@ -94,7 +94,7 @@ $s = 1, ... , k$. Start with subset $s = 1$.
 * Solution to $\text{overfitting}$ is to add $\text{cost  to complexity}$ 
 * One measure for complexity in a tree: the number of $\text{leaves}$ and other is the  $\text{depth}$ of the tree
 * Typically chosen using $1\text{0-fold-cross-validation}$.
-* "Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard 
+* "Some researchers recommend being a bit more aggressive and advocate choosing the complexity parameter that is one standard"
 
 
 ***
